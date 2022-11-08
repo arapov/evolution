@@ -8,6 +8,8 @@
   home-manager.users.anton = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
+    home.sessionPath = [ "~/.local/bin" ];
+
     home.packages = with pkgs; [
       git-crypt tig
       mc
@@ -72,10 +74,6 @@
       sessionVariables = {
         EDITOR = "vim";
       };
-
-      initExtra = ''
-        eval "$(starship init zsh)"
-      '';
     };
 
     programs.ssh = {
