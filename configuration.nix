@@ -2,7 +2,6 @@
 {
   services.nix-daemon.enable = true;
   nix.package = pkgs.nix;
-  programs.zsh.enable = true;
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -68,6 +67,12 @@
     };
     programs.zsh = {
       enable = true;
+      enableAutosuggestions = true;
+
+      sessionVariables = {
+        EDITOR = "vim";
+      };
+
       initExtra = ''
         eval "$(starship init zsh)"
       '';
