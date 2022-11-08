@@ -73,6 +73,23 @@
       '';
     };
 
+    programs.ssh = {
+      enable = true;
+
+      extraConfig = ''
+        GSSAPIDelegateCredentials yes
+      '';
+
+      matchBlocks = {
+        "github.com" = {
+          hostname = "github.com";
+          user = "git";
+          identityFile = [ "~/.ssh/id_rsa" ];
+          identitiesOnly = true;
+        };
+      };
+    };
+
   };
 
 }
