@@ -9,6 +9,11 @@
   home-manager.users.anton = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
+    home.packages = with pkgs; [
+      git-crypt tig
+      mc
+    ];
+
     programs.git = {
       enable = true;
       userName = "Anton Arapov";
