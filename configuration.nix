@@ -1,8 +1,12 @@
 { pkgs, ... }:
 {
   services.nix-daemon.enable = true;
-  nix.package = pkgs.nix;
   programs.zsh.enable = true;
+
+  nix = {
+    package = pkgs.nix;
+    settings.trusted-users = [ "root" "anton" ];
+  };
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -12,6 +16,7 @@
     home.sessionPath = [ "~/.local/bin" ];
 
     home.packages = with pkgs; [
+      cachix
       git-crypt tig
       mc
     ];
