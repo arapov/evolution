@@ -13,7 +13,7 @@
   home-manager.users.anton = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
-    home.sessionPath = [ "~/.local/bin" ];
+    home.sessionPath = [ "$HOME/.local/bin" ];
 
     home.packages = with pkgs; [
       cachix
