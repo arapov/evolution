@@ -21,6 +21,38 @@
       mc
     ];
 
+    programs.vscode = {
+      enable = true;
+      package = pkgs.vscodium;
+
+      extensions = (with pkgs.vscode-extensions; [
+        eamodio.gitlens
+        gruntfuggly.todo-tree
+        tamasfe.even-better-toml
+        # nix
+        bbenoist.nix b4dm4n.vscode-nixpkgs-fmt
+        arrterian.nix-env-selector
+        # rust
+        rust-lang.rust-analyzer
+      ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
+        {
+          # marus25.cortex-debug
+          publisher = "marus25";
+          name = "cortex-debug";
+          version = "1.6.7";
+          sha256 = "sha256-0xIf+bNUUf1MJtPaNMOwqwyoVhYuHmsjftWjInNlFIo=";
+        }
+      ];
+
+      userSettings = {
+        "update.mode" = "none";
+        "window.titleBarStyle" = "custom";
+        "editor.rulers" = [80 120];
+        "rust-analyzer.trace.server" = "messages";
+        "editor.formatOnSave" = true;
+      };
+    };
+
     programs.git = {
       enable = true;
       userName = "Anton Arapov";
