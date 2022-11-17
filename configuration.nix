@@ -1,5 +1,4 @@
-{ pkgs, ... }:
-{
+{ pkgs, ... }: {
   services.nix-daemon.enable = true;
   programs.zsh.enable = true;
 
@@ -13,12 +12,20 @@
   home-manager.users.anton = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
-    home.sessionPath = [ "$HOME/.local/bin" ];
+    home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
 
     home.packages = with pkgs; [
       cachix
       git-crypt tig
       mc
+      (fenix.complete.withComponents [
+        "cargo"
+        "clippy"
+        "rust-src"
+        "rustc"
+        "rustfmt"
+      ])
+      rust-analyzer-nightly
     ];
 
     programs.vscode = {
