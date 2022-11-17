@@ -18,6 +18,8 @@
       cachix
       git-crypt tig
       mc
+      rclone restic
+
       (fenix.complete.withComponents [
         "cargo"
         "clippy"
