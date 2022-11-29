@@ -98,7 +98,7 @@
       vimAlias = true;
 
       plugins = with pkgs.vimPlugins; [
-        vim-nix
+        vim-nix vim-jsonnet
       ];
     };
 
