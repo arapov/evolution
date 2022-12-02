@@ -59,6 +59,7 @@
         "editor.rulers" = [80 120];
         "rust-analyzer.trace.server" = "messages";
         "editor.formatOnSave" = true;
+        "workbench.colorTheme" = "Solarized Dark";
       };
     };
 
