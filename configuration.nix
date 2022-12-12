@@ -7,6 +7,14 @@
     settings.trusted-users = [ "root" "anton" ];
   };
 
+  fonts = {
+    fontDir.enable = true;
+    fonts = with pkgs; [
+      anonymousPro
+      (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
+    ];
+  };
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.anton = { pkgs, ... }: {
@@ -44,18 +52,21 @@
         # rust
         rust-lang.rust-analyzer
       ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          # marus25.cortex-debug
-          publisher = "marus25";
-          name = "cortex-debug";
-          version = "1.6.7";
-          sha256 = "sha256-0xIf+bNUUf1MJtPaNMOwqwyoVhYuHmsjftWjInNlFIo=";
-        }
+#        {
+#          # marus25.cortex-debug
+#          publisher = "marus25";
+#          name = "cortex-debug";
+#          version = "1.6.7";
+#          sha256 = "sha256-0xIf+bNUUf1MJtPaNMOwqwyoVhYuHmsjftWjInNlFIo=";
+#        }
       ];
 
       userSettings = {
         "update.mode" = "none";
         "window.titleBarStyle" = "custom";
+        "editor.fontFamily" = "FiraCode Nerd Font, Hack Nerd Font, Anonymous Pro";
+        "editor.fontSize" = 13;
+        "editor.fontLigatures" = true;
         "editor.rulers" = [80 120];
         "rust-analyzer.trace.server" = "messages";
         "editor.formatOnSave" = true;
