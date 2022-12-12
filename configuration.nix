@@ -51,6 +51,7 @@
         arrterian.nix-env-selector
         # rust
         rust-lang.rust-analyzer
+        vadimcn.vscode-lldb
       ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
 #        {
 #          # marus25.cortex-debug
@@ -71,6 +72,7 @@
         "rust-analyzer.trace.server" = "messages";
         "editor.formatOnSave" = true;
         "workbench.colorTheme" = "Solarized Dark";
+        "lldb.verboseLogging" = true;
       };
     };
 
