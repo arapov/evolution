@@ -15,7 +15,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    #nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:arapov/nixpkgs/nixpkgs-unstable";
   };
 
   outputs = { self, darwin, home-manager, fenix, nixpkgs }:
