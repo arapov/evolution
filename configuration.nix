@@ -51,7 +51,7 @@
         arrterian.nix-env-selector
         # rust
         rust-lang.rust-analyzer
-        vadimcn.vscode-lldb
+        # vadimcn.vscode-lldb # is broken https://github.com/NixOS/nixpkgs/issues/148946
       ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
 #        {
 #          # marus25.cortex-debug
@@ -71,8 +71,8 @@
         "editor.rulers" = [80 120];
         "rust-analyzer.trace.server" = "messages";
         "editor.formatOnSave" = true;
-        "workbench.colorTheme" = "Solarized Dark";
-        "lldb.verboseLogging" = true;
+#        "lldb.verboseLogging" = true;
+#        "lldb.launch.terminal" = "external";
       };
     };
 
