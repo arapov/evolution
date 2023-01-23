@@ -27,7 +27,7 @@
       git-crypt tig
       mc
       rclone restic
-      openscad
+#      openscad
 
       (fenix.complete.withComponents [
         "cargo"
