@@ -27,6 +27,7 @@
       git-crypt tig
       mc
       rclone restic
+      python3 poetry
 #      openscad
 
       (fenix.complete.withComponents [
