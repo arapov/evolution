@@ -28,7 +28,7 @@
       mc
       rclone restic
       python3 poetry
-#      openscad
+      #openscad #broken
 
       (fenix.complete.withComponents [
         "cargo"
@@ -55,13 +55,13 @@
         rust-lang.rust-analyzer
         # vadimcn.vscode-lldb # is broken https://github.com/NixOS/nixpkgs/issues/148946
       ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-#        {
-#          # marus25.cortex-debug
-#          publisher = "marus25";
-#          name = "cortex-debug";
-#          version = "1.6.7";
-#          sha256 = "sha256-0xIf+bNUUf1MJtPaNMOwqwyoVhYuHmsjftWjInNlFIo=";
-#        }
+        {
+          # adzero.vscode-sievehighlight
+          publisher = "adzero";
+          name = "vscode-sievehighlight";
+          version = "1.0.6";
+          sha256 = "sha256-8Ompv792eI2kIH+5+KPL9jAf88xsMGQewHEQwi8BhoQ=";
+        }
       ];
 
       userSettings = {
