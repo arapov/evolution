@@ -23,7 +23,7 @@
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
 
     home.packages = with pkgs; [
-      cachix
+      cachix jq
       git-crypt tig
       mc
       rclone restic
