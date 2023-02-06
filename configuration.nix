@@ -142,9 +142,9 @@
     programs.ssh = {
       enable = true;
 
-      extraConfig = ''
-        GSSAPIDelegateCredentials yes
-      '';
+      #extraConfig = ''
+      #  GSSAPIDelegateCredentials yes
+      #'';
 
       matchBlocks = {
         "github.com" = {
