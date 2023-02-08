@@ -153,6 +153,12 @@
           identityFile = [ "~/.ssh/id_rsa" ];
           identitiesOnly = true;
         };
+        "github.openssl.org" = {
+          hostname = "github.openssl.org";
+          user = "git";
+          identityFile = [ "~/.ssh/id_rsa" ];
+          identitiesOnly = true;
+        };
       };
     };
 
