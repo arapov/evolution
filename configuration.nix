@@ -24,24 +24,25 @@
 
     home.packages = with pkgs; [
       cachix jq
-      git-crypt tig
+      tig
       mc
       rclone restic
       python3 poetry
       #openscad #broken
 
-      (fenix.complete.withComponents [
-        "cargo"
-        "clippy"
-        "rust-src"
-        "rustc"
-        "rustfmt"
-      ])
-      rust-analyzer-nightly
+      # Rust:
+      #(fenix.complete.withComponents [
+      #  "cargo"
+      #  "clippy"
+      #  "rust-src"
+      #  "rustc"
+      #  "rustfmt"
+      #])
+      #rust-analyzer-nightly
     ];
 
     programs.vscode = {
-      enable = true;
+      enable = false;
       package = pkgs.vscodium;
 
       extensions = (with pkgs.vscode-extensions; [
@@ -141,10 +142,6 @@
 
     programs.ssh = {
       enable = true;
-
-      #extraConfig = ''
-      #  GSSAPIDelegateCredentials yes
-      #'';
 
       matchBlocks = {
         "github.com" = {
