@@ -21,10 +21,10 @@
 
   outputs = { self, darwin, home-manager, fenix, nixpkgs }:
   let
-    system = "x86_64-darwin";
+    system = "aarch64-darwin";
     overlays = [ fenix.overlays.default ];
 
-    defaultPackage.x86_64-darwin = fenix.packages.x86_64-darwin.minimal.toolchain;
+    defaultPackage.aarch64-darwin = fenix.packages.aarch64-darwin.minimal.toolchain;
     pkgs = import nixpkgs {
       inherit overlays system;
     };
