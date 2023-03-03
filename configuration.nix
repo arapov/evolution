@@ -83,6 +83,11 @@
       enable = true;
       userName = "Anton Arapov";
       userEmail = "anton@deadbeef.mx";
+
+      ignores = [
+        ".DS_Store"
+      ];
+
       signing = {
         key = "134C02E813889057DA2F3FDBEDDD4C5DAA149BBE";
         signByDefault = true;
