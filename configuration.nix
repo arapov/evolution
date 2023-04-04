@@ -27,6 +27,7 @@
       tig
       mc
       rclone restic
+      podman qemu
       python3 poetry
       #openscad #broken
 
