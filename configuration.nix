@@ -15,6 +15,11 @@
     ];
   };
 
+  users.users.anton = {
+    name = "anton";
+    home = "/Users/anton";
+  };
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.anton = { pkgs, ... }: {
