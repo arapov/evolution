@@ -37,15 +37,19 @@
       #openscad #broken
 
       # Rust:
-      #(fenix.complete.withComponents [
-      #  "cargo"
-      #  "clippy"
-      #  "rust-src"
-      #  "rustc"
-      #  "rustfmt"
-      #])
-      #rust-analyzer-nightly
+      (fenix.complete.withComponents [
+        "cargo"
+        "clippy"
+        "rust-src"
+        "rustc"
+        "rustfmt"
+      ])
+      rust-analyzer-nightly
     ];
+
+    manual.manpages.enable = false;
+    manual.html.enable = false;
+    manual.json.enable = false;
 
     programs.vscode = {
       enable = false;
