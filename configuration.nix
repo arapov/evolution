@@ -36,15 +36,15 @@
       python3 poetry
       #openscad #broken
 
-      # Rust:
-      (fenix.complete.withComponents [
+      # Rust: https://github.com/nix-community/fenix
+      (fenix.stable.withComponents [
         "cargo"
         "clippy"
         "rust-src"
         "rustc"
         "rustfmt"
       ])
-      rust-analyzer-nightly
+      rust-analyzer
     ];
 
     manual.manpages.enable = false;
