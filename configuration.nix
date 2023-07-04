@@ -31,7 +31,7 @@
       cachix jq
       tig
       mc
-      rclone restic
+      #broken rclone restic
       podman qemu
       python3 poetry
       #openscad #broken
