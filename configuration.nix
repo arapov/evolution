@@ -19,6 +19,8 @@
     name = "anton";
     home = "/Users/anton";
   };
+  environment.pathsToLink = ["/share/qemu"]; # workaround https://discourse.nixos.org/t/out-share-linked-with-nix-profile-install-but-not-otherwise/27561
+
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -26,7 +28,6 @@
     home.stateVersion = "22.05";
 
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
-
     home.packages = with pkgs; [
       cachix jq
       tig
