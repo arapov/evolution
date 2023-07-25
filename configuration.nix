@@ -60,6 +60,7 @@
         eamodio.gitlens
         gruntfuggly.todo-tree
         tamasfe.even-better-toml
+        stkb.rewrap
         # nix
         bbenoist.nix b4dm4n.vscode-nixpkgs-fmt
         arrterian.nix-env-selector
