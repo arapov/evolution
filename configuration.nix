@@ -75,11 +75,20 @@
           version = "1.0.6";
           sha256 = "sha256-8Ompv792eI2kIH+5+KPL9jAf88xsMGQewHEQwi8BhoQ=";
         }
+        {
+          # EmilijanMB.sublime-text-4-theme
+          # https://marketplace.visualstudio.com/items?itemName=EmilijanMB.sublime-text-4-theme
+          publisher = "EmilijanMB";
+          name = "sublime-text-4-theme";
+          version = "1.1.2";
+          sha256 = "sha256-I1UO8IEq7HKxgH0gVyUN4cdBOouTvsyMgBjPIYQ6E5U=";
+        }
       ];
 
       userSettings = {
         "update.mode" = "none";
         "window.titleBarStyle" = "custom";
+        "workbench.colorTheme" = "Sublime Text 4 Theme";
         "editor.fontFamily" = "FiraCode Nerd Font, Hack Nerd Font, Anonymous Pro";
         "editor.fontSize" = 13;
         "editor.fontLigatures" = true;
