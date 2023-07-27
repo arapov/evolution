@@ -31,7 +31,7 @@
     home.packages = with pkgs; [
       cachix jq
       tig
-      mc
+      mc xz htop
       #broken rclone restic
       podman qemu
       python3 poetry
