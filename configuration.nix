@@ -83,6 +83,35 @@
           version = "1.1.2";
           sha256 = "sha256-I1UO8IEq7HKxgH0gVyUN4cdBOouTvsyMgBjPIYQ6E5U=";
         }
+        {
+          # bierner.github-markdown-preview
+          publisher = "bierner";
+          name = "github-markdown-preview";
+          version = "0.3.0";
+          sha256 = "sha256-7pbl5OgvJ6S0mtZWsEyUzlg+lkUhdq3rkCCpLsvTm4g=";
+        }
+        {
+          # bierner.markdown-preview-github-styles
+          publisher = "bierner";
+          name = "markdown-preview-github-styles";
+          version = "2.0.2";
+          sha256 = "sha256-GiSS9gCCmOfsBrzahJe89DfyFyJJhQ8tkXVJbfibHQY=";
+        }
+        {
+          # bierner.markdown-footnotes
+          publisher = "bierner";
+          name = "markdown-footnotes";
+          version = "0.1.1";
+          sha256 = "sha256-h/Iyk8CKFr0M5ULXbEbjFsqplnlN7F+ZvnUTy1An5t4=";
+        }
+        {
+          # bierner.markdown-checkbox
+          publisher = "bierner";
+          name = "markdown-checkbox";
+          version = "0.4.0";
+          sha256 = "sha256-AoPcdN/67WOzarnF+GIx/nans38Jan8Z5D0StBWIbkk=";
+        }
+
       ];
 
       userSettings = {
@@ -95,6 +124,7 @@
         "editor.rulers" = [80 120];
         "rust-analyzer.trace.server" = "messages";
         "editor.formatOnSave" = true;
+        "markdown-preview-github-styles.colorTheme" = "light";
 #        "lldb.verboseLogging" = true;
 #        "lldb.launch.terminal" = "external";
       };
