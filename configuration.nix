@@ -111,6 +111,13 @@
           version = "0.4.0";
           sha256 = "sha256-AoPcdN/67WOzarnF+GIx/nans38Jan8Z5D0StBWIbkk=";
         }
+        {
+          # bierner.markdown-mermaid
+          publisher = "bierner";
+          name = "markdown-mermaid";
+          version = "1.19.0";
+          sha256 = "sha256-/uYU/drj4ywFDoXht5sBL/0vktfX9qXNyEN7Wo0zN84=";
+        }
 
       ];
 
