@@ -36,6 +36,7 @@
       podman qemu
       python3 poetry
       #openscad #broken
+      openssl
 
       # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
