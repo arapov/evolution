@@ -133,6 +133,7 @@
         "rust-analyzer.trace.server" = "messages";
         "editor.formatOnSave" = true;
         "markdown-preview-github-styles.colorTheme" = "light";
+        "editor.minimap.enabled" = "false";
 #        "lldb.verboseLogging" = true;
 #        "lldb.launch.terminal" = "external";
       };
