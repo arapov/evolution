@@ -37,6 +37,7 @@
       python3 poetry
       #openscad #broken
       openssl
+      (pkgs.callPackage ./ossl.nix { })
 
       # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
