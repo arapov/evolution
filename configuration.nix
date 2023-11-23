@@ -32,6 +32,7 @@
       cachix jq
       tig gh
       mc xz htop
+      graphviz
       #broken rclone restic
       podman qemu
       python3 poetry
