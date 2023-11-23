@@ -30,7 +30,7 @@
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
     home.packages = with pkgs; [
       cachix jq
-      tig
+      tig gh
       mc xz htop
       #broken rclone restic
       podman qemu
