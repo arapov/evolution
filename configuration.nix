@@ -143,6 +143,7 @@
 
     programs.git = {
       enable = true;
+      lfs.enable = true;
       userName = "Anton Arapov";
       userEmail = "anton@deadbeef.mx";
 
