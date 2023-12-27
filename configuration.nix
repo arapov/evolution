@@ -33,7 +33,7 @@
       tig gh
       mc xz htop
       graphviz
-      #broken rclone restic
+      rclone restic
       podman qemu
       python3 poetry
       #openscad #broken
