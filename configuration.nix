@@ -97,8 +97,8 @@
           # bierner.markdown-preview-github-styles
           publisher = "bierner";
           name = "markdown-preview-github-styles";
-          version = "2.0.2";
-          sha256 = "sha256-GiSS9gCCmOfsBrzahJe89DfyFyJJhQ8tkXVJbfibHQY=";
+          version = "2.0.3";
+          sha256 = "sha256-yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
         }
         {
           # bierner.markdown-footnotes
@@ -118,8 +118,8 @@
           # bierner.markdown-mermaid
           publisher = "bierner";
           name = "markdown-mermaid";
-          version = "1.19.0";
-          sha256 = "sha256-/uYU/drj4ywFDoXht5sBL/0vktfX9qXNyEN7Wo0zN84=";
+          version = "1.21.0";
+          sha256 = "sha256-YyOdCegetz/K4Sev3njxgsDWjpI6MG2LsV6MFyCioMc=";
         }
 
       ];
