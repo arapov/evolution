@@ -4,7 +4,7 @@
 
   nix = {
     package = pkgs.nix;
-    settings.trusted-users = [ "root" "anton" ];
+    settings.trusted-users = [ "root" "neuro" ];
   };
 
   fonts = {
@@ -15,16 +15,16 @@
     ];
   };
 
-  users.users.anton = {
-    name = "anton";
-    home = "/Users/anton";
+  users.users.neuro = {
+    name = "neuro";
+    home = "/Users/neuro";
   };
   environment.pathsToLink = ["/share/qemu"]; # workaround https://discourse.nixos.org/t/out-share-linked-with-nix-profile-install-but-not-otherwise/27561
 
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.anton = { pkgs, ... }: {
+  home-manager.users.neuro = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
