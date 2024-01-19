@@ -31,7 +31,7 @@
     home.packages = with pkgs; [
       cachix jq
       tig gh
-      mc xz htop
+      mc xz htop wget
       graphviz
       rclone restic
       podman qemu
