@@ -31,7 +31,8 @@
     home.packages = with pkgs; [
       cachix jq
       tig gh
-      mc xz htop wget
+      mc xz htop
+      wget curl
       graphviz
       rclone restic
       podman qemu
@@ -39,8 +40,6 @@
       #openscad #broken
       openssl
       (pkgs.callPackage ./ossl.nix { })
-
-      clang
 
       # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
