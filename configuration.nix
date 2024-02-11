@@ -41,6 +41,8 @@
       openssl
       (pkgs.callPackage ./ossl.nix { })
 
+      llvm clang
+
       # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
         "cargo"
