@@ -42,6 +42,7 @@
       (pkgs.callPackage ./ossl.nix { })
 
       llvm clang
+      nodejs
 
       # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
