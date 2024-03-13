@@ -38,6 +38,8 @@
       podman qemu
       python3 poetry
       #openscad #broken
+      gmailctl
+
       openssl
       (pkgs.callPackage ./ossl.nix { })
 
