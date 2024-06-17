@@ -8,8 +8,7 @@
   };
 
   fonts = {
-    fontDir.enable = true;
-    fonts = with pkgs; [
+    packages = with pkgs; [
       anonymousPro
       (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
     ];
