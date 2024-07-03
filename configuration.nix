@@ -34,7 +34,10 @@
       wget curl
       graphviz
       rclone restic
+
       podman qemu
+      (pkgs.callPackage ./vfkit.nix { })
+
       python3 poetry
       #openscad #broken
       gmailctl
