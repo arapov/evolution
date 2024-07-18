@@ -48,6 +48,8 @@
       llvm clang
       nodejs
 
+      hugo
+
       # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
         "cargo"
