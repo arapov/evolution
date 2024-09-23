@@ -22,6 +22,7 @@
   outputs = { self, darwin, home-manager, fenix, nixpkgs }:
   let
     system = "aarch64-darwin";
+    system.stateVersion = 5;
     overlays = [ fenix.overlays.default ];
 
     defaultPackage.aarch64-darwin = fenix.packages.aarch64-darwin.minimal.toolchain;
