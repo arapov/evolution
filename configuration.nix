@@ -81,7 +81,7 @@
         arrterian.nix-env-selector
         # rust
         rust-lang.rust-analyzer
-        # vadimcn.vscode-lldb # is broken https://github.com/NixOS/nixpkgs/issues/148946
+        vadimcn.vscode-lldb # is broken https://github.com/NixOS/nixpkgs/issues/148946
       ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
         {
           # adzero.vscode-sievehighlight
@@ -148,8 +148,8 @@
         "editor.formatOnSave" = true;
         "markdown-preview-github-styles.colorTheme" = "light";
         "editor.minimap.enabled" = false;
-#        "lldb.verboseLogging" = true;
-#        "lldb.launch.terminal" = "external";
+        "lldb.verboseLogging" = true;
+        "lldb.launch.terminal" = "external";
       };
     };
 
