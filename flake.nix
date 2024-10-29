@@ -32,7 +32,7 @@
   in {
     darwinConfigurations."heimdall" = darwin.lib.darwinSystem {
       inherit pkgs system;
-
+ 
       modules = [
         home-manager.darwinModules.home-manager
         ./configuration.nix
