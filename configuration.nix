@@ -12,7 +12,7 @@
   fonts = {
     packages = with pkgs; [
       anonymousPro
-      (nerdfonts.override { fonts = [ "FiraCode" "Hack" ]; })
+      (nerdfonts.override { fonts = [ "FiraCode" "Hack" "JetBrainsMono" ]; })
     ];
   };
 
@@ -30,6 +30,7 @@
 
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
     home.packages = with pkgs; [
+      alacritty
       cachix jq
       tig gh
       mc xz htop
