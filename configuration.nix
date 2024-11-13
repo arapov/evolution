@@ -49,6 +49,7 @@
       (pkgs.callPackage ./ossl.nix { })
 
       llvm clang libiconv
+      cmake
       nodejs
 
       hugo
