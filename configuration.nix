@@ -12,7 +12,10 @@
   fonts = {
     packages = with pkgs; [
       anonymousPro
-      (nerdfonts.override { fonts = [ "FiraCode" "Hack" "JetBrainsMono" ]; })
+      #(nerdfonts.override { fonts = [ "FiraCode" "Hack" "JetBrainsMono" ]; })
+      nerd-fonts.fira-code
+      nerd-fonts.hack
+      nerd-fonts.jetbrains-mono
     ];
   };
 
