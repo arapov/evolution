@@ -33,7 +33,6 @@
 
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
     home.packages = with pkgs; [
-      alacritty
       cachix jq
       tig gh
       mc xz htop
