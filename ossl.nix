@@ -21,7 +21,7 @@ let
     p.Clone p.YAMLLibYAML   # for QueryApp
   ]);
 
-  workPath = "/Users/neuro/Foundation";
+  workPath = "/Users/anton/Foundation";
   dataPath = "${workPath}/data";
   toolsPath = "${workPath}/tools";
   omcToolsPath = "${workPath}/omc-tools";

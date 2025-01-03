@@ -1,34 +1,32 @@
 { pkgs, ... }: {
   system.stateVersion = 5;
 
-  services.nix-daemon.enable = true;
+  # services.nix-daemon.enable = true;
   programs.zsh.enable = true;
 
   nix = {
     package = pkgs.nix;
-    settings.trusted-users = [ "root" "neuro" ];
+    settings.trusted-users = [ "root" "anton" ];
   };
 
   fonts = {
     packages = with pkgs; [
       anonymousPro
-      #(nerdfonts.override { fonts = [ "FiraCode" "Hack" "JetBrainsMono" ]; })
       nerd-fonts.fira-code
       nerd-fonts.hack
       nerd-fonts.jetbrains-mono
     ];
   };
 
-  users.users.neuro = {
-    name = "neuro";
-    home = "/Users/neuro";
+  users.users.anton = {
+    name = "anton";
+    home = "/Users/anton";
   };
-  environment.pathsToLink = ["/share/qemu"]; # workaround https://discourse.nixos.org/t/out-share-linked-with-nix-profile-install-but-not-otherwise/27561
-
+  #environment.pathsToLink = ["/share/qemu"]; # workaround https://discourse.nixos.org/t/out-share-linked-with-nix-profile-install-but-not-otherwise/27561
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.neuro = { pkgs, ... }: {
+  home-manager.users.anton = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
@@ -37,34 +35,34 @@
       tig gh
       mc xz htop
       wget curl
-      graphviz
-      rclone restic
+#      graphviz
+#      rclone restic
 
-      podman qemu
-      (pkgs.callPackage ./vfkit.nix { })
+#      podman qemu
+#      (pkgs.callPackage ./vfkit.nix { })
 
-      python3 poetry
-      #openscad #broken
+#      python3 poetry
+#      #openscad #broken
       gmailctl
 
-      openssl
-      (pkgs.callPackage ./ossl.nix { })
+#      openssl
+#      (pkgs.callPackage ./ossl.nix { })
 
-      llvm clang libiconv
-      cmake
-      nodejs
+#      llvm clang libiconv
+#      cmake
+#      nodejs
 
-      hugo
+#      hugo
 
-      # Rust: https://github.com/nix-community/fenix
-      (fenix.stable.withComponents [
-        "cargo"
-        "clippy"
-        "rust-src"
-        "rustc"
-        "rustfmt"
-      ])
-      rust-analyzer
+#      # Rust: https://github.com/nix-community/fenix
+#      (fenix.stable.withComponents [
+#        "cargo"
+#        "clippy"
+#        "rust-src"
+#        "rustc"
+#        "rustfmt"
+#      ])
+#      rust-analyzer
     ];
 
     manual.manpages.enable = false;
@@ -72,7 +70,7 @@
     manual.json.enable = false;
 
     programs.vscode = {
-      enable = true;
+      enable = false;
       package = pkgs.vscodium;
 
       extensions = (with pkgs.vscode-extensions; [
@@ -196,7 +194,7 @@
     };
 
     programs.neovim = {
-      enable = true;
+      enable = false;
       vimAlias = true;
 
       plugins = with pkgs.vimPlugins; [
