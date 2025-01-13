@@ -41,7 +41,7 @@
 #      podman qemu
 #      (pkgs.callPackage ./vfkit.nix { })
 
-#      python3 poetry
+      python3 poetry
 #      #openscad #broken
       gmailctl
 
@@ -194,7 +194,7 @@
     };
 
     programs.neovim = {
-      enable = false;
+      enable = true;
       vimAlias = true;
 
       plugins = with pkgs.vimPlugins; [
