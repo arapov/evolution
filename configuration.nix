@@ -41,7 +41,7 @@
 #      podman qemu
 #      (pkgs.callPackage ./vfkit.nix { })
 
-      python3 poetry ruff
+      python3 poetry ruff pyright
 #      #openscad #broken
       gmailctl
 
