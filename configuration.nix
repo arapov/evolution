@@ -38,7 +38,7 @@
 #      graphviz
 #      rclone restic
 
-#      podman qemu
+      podman qemu
 #      (pkgs.callPackage ./vfkit.nix { })
 
       python3 poetry ruff pyright
