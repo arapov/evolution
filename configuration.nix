@@ -22,7 +22,6 @@
     name = "neuro";
     home = "/Users/neuro";
   };
-  #environment.pathsToLink = ["/share/qemu"]; # workaround https://discourse.nixos.org/t/out-share-linked-with-nix-profile-install-but-not-otherwise/27561
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
@@ -35,24 +34,15 @@
       tig gh
       mc xz htop
       wget curl
-#      graphviz
+      gmailctl jsonnet
 #      rclone restic
 
       podman qemu
-#      (pkgs.callPackage ./vfkit.nix { })
 
       python3 poetry ruff pyright
-#      #openscad #broken
-      gmailctl
 
-#      openssl
+      openssl
 #      (pkgs.callPackage ./ossl.nix { })
-
-#      llvm clang libiconv
-#      cmake
-#      nodejs
-
-#      hugo
 
 #      # Rust: https://github.com/nix-community/fenix
 #      (fenix.stable.withComponents [
@@ -68,92 +58,6 @@
     manual.manpages.enable = false;
     manual.html.enable = false;
     manual.json.enable = false;
-
-    programs.vscode = {
-      enable = false;
-      package = pkgs.vscodium;
-
-      extensions = (with pkgs.vscode-extensions; [
-        eamodio.gitlens
-        gruntfuggly.todo-tree
-        tamasfe.even-better-toml
-        stkb.rewrap
-        # nix
-        bbenoist.nix b4dm4n.vscode-nixpkgs-fmt
-        arrterian.nix-env-selector
-        # rust
-        rust-lang.rust-analyzer
-        vadimcn.vscode-lldb # is broken https://github.com/NixOS/nixpkgs/issues/148946
-      ]) ++ pkgs.vscode-utils.extensionsFromVscodeMarketplace [
-        {
-          # adzero.vscode-sievehighlight
-          publisher = "adzero";
-          name = "vscode-sievehighlight";
-          version = "1.0.6";
-          sha256 = "sha256-8Ompv792eI2kIH+5+KPL9jAf88xsMGQewHEQwi8BhoQ=";
-        }
-        {
-          # EmilijanMB.sublime-text-4-theme
-          # https://marketplace.visualstudio.com/items?itemName=EmilijanMB.sublime-text-4-theme
-          publisher = "EmilijanMB";
-          name = "sublime-text-4-theme";
-          version = "1.1.2";
-          sha256 = "sha256-I1UO8IEq7HKxgH0gVyUN4cdBOouTvsyMgBjPIYQ6E5U=";
-        }
-        {
-          # bierner.github-markdown-preview
-          publisher = "bierner";
-          name = "github-markdown-preview";
-          version = "0.3.0";
-          sha256 = "sha256-7pbl5OgvJ6S0mtZWsEyUzlg+lkUhdq3rkCCpLsvTm4g=";
-        }
-        {
-          # bierner.markdown-preview-github-styles
-          publisher = "bierner";
-          name = "markdown-preview-github-styles";
-          version = "2.0.3";
-          sha256 = "sha256-yuF6TJSv0V2OvkBwqwAQKRcHCAXNL+NW8Q3s+dMFnLY=";
-        }
-        {
-          # bierner.markdown-footnotes
-          publisher = "bierner";
-          name = "markdown-footnotes";
-          version = "0.1.1";
-          sha256 = "sha256-h/Iyk8CKFr0M5ULXbEbjFsqplnlN7F+ZvnUTy1An5t4=";
-        }
-        {
-          # bierner.markdown-checkbox
-          publisher = "bierner";
-          name = "markdown-checkbox";
-          version = "0.4.0";
-          sha256 = "sha256-AoPcdN/67WOzarnF+GIx/nans38Jan8Z5D0StBWIbkk=";
-        }
-        {
-          # bierner.markdown-mermaid
-          publisher = "bierner";
-          name = "markdown-mermaid";
-          version = "1.21.0";
-          sha256 = "sha256-YyOdCegetz/K4Sev3njxgsDWjpI6MG2LsV6MFyCioMc=";
-        }
-
-      ];
-
-      userSettings = {
-        "update.mode" = "none";
-        "window.titleBarStyle" = "custom";
-        "workbench.colorTheme" = "Sublime Text 4 Theme";
-        "editor.fontFamily" = "FiraCode Nerd Font, Hack Nerd Font, Anonymous Pro";
-        "editor.fontSize" = 13;
-        "editor.fontLigatures" = true;
-        "editor.rulers" = [80 120];
-        "rust-analyzer.trace.server" = "messages";
-        "editor.formatOnSave" = true;
-        "markdown-preview-github-styles.colorTheme" = "light";
-        "editor.minimap.enabled" = false;
-        "lldb.verboseLogging" = true;
-        "lldb.launch.terminal" = "external";
-      };
-    };
 
     programs.git = {
       enable = true;
