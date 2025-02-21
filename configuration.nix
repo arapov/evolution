@@ -91,9 +91,8 @@
             insteadOf = "https://github.com/rust-lang/crates.io-index";
           };
         };
-        pull = {
-          ff = "only";
-        };
+        pull = { ff = "only"; };
+        push = { autoSetupRemote = true; };
       };
     };
 
