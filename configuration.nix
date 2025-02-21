@@ -72,7 +72,7 @@
       signing = {
         key = "134C02E813889057DA2F3FDBEDDD4C5DAA149BBE";
         signByDefault = true;
-        gpgPath = "/usr/local/bin/gpg";
+        signer = "/usr/local/bin/gpg";
       };
 
       extraConfig = {
