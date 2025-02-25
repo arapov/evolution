@@ -23,6 +23,8 @@
     home = "/Users/neuro";
   };
 
+  security.pam.services.sudo_local.touchIdAuth = true;
+
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
   home-manager.users.neuro = { pkgs, ... }: {
