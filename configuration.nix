@@ -40,6 +40,7 @@
 #      rclone restic
 
       podman qemu
+      google-cloud-sdk
 
       python3 poetry ruff pyright
 
