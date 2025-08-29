@@ -131,8 +131,12 @@
 
     programs.ssh = {
       enable = true;
+      enableDefaultConfig = false;
 
       matchBlocks = {
+        "*" = {
+          #default
+        };
         "github.com" = {
           hostname = "github.com";
           user = "git";
