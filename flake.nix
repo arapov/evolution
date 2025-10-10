@@ -10,10 +10,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-#    fenix = {
-#      url = "github:nix-community/fenix";
-#      inputs.nixpkgs.follows = "nixpkgs";
-#    };
+    fenix = {
+      url = "github:nix-community/fenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
   };

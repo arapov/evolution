@@ -48,14 +48,14 @@
 #      (pkgs.callPackage ./ossl.nix { })
 
 #      # Rust: https://github.com/nix-community/fenix
-#      (fenix.stable.withComponents [
-#        "cargo"
-#        "clippy"
-#        "rust-src"
-#        "rustc"
-#        "rustfmt"
-#      ])
-#      rust-analyzer
+      (fenix.stable.withComponents [
+        "cargo"
+        "clippy"
+        "rust-src"
+        "rustc"
+        "rustfmt"
+      ])
+      rust-analyzer
     ];
 
     manual.manpages.enable = false;
