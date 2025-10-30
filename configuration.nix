@@ -79,25 +79,18 @@
         user.name = "Anton Arapov";
         user.email = "anton@deadbeef.mx";
 
-        #extraConfig = {
-          init.defaultBranch = "master";
-          core = {
-            editor = "vim";
-            whitespace = "trailing-space,space-before-tab";
-          };
-          url = {
-            "git@github.com:" = {
-              insteadOf = "https://github.com/";
-            };
-          };
-          url = { # makes rust's cargo happy again
-            "https://github.com/rust-lang/crates.io-index" = {
-              insteadOf = "https://github.com/rust-lang/crates.io-index";
-            };
-          };
-          pull = { ff = "only"; };
-          push = { autoSetupRemote = true; };
-        #};
+        init.defaultBranch = "master";
+        core.editor = "vim";
+        core.whitespace = "trailing-space,space-before-tab";
+        url."git@github.com:" = {
+          insteadOf = "https://github.com/";
+        };
+        url."https://github.com/rust-lang/crates.io-index" = {
+          insteadOf = "https://github.com/rust-lang/crates.io-index";
+        };
+ 
+        pull.ff = "only";
+        push.autoSetupRemote = true;
       };
     };
 
