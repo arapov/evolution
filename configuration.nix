@@ -65,9 +65,6 @@
     programs.git = {
       enable = true;
       lfs.enable = true;
-      userName = "Anton Arapov";
-      userEmail = "anton@deadbeef.mx";
-
       ignores = [
         ".DS_Store"
       ];
@@ -78,24 +75,29 @@
         signer = "/usr/local/bin/gpg";
       };
 
-      extraConfig = {
-        init.defaultBranch = "master";
-        core = {
-          editor = "vim";
-          whitespace = "trailing-space,space-before-tab";
-        };
-        url = {
-          "git@github.com:" = {
-            insteadOf = "https://github.com/";
+      settings = {
+        user.name = "Anton Arapov";
+        user.email = "anton@deadbeef.mx";
+
+        #extraConfig = {
+          init.defaultBranch = "master";
+          core = {
+            editor = "vim";
+            whitespace = "trailing-space,space-before-tab";
           };
-        };
-        url = { # makes rust's cargo happy again
-          "https://github.com/rust-lang/crates.io-index" = {
-            insteadOf = "https://github.com/rust-lang/crates.io-index";
+          url = {
+            "git@github.com:" = {
+              insteadOf = "https://github.com/";
+            };
           };
-        };
-        pull = { ff = "only"; };
-        push = { autoSetupRemote = true; };
+          url = { # makes rust's cargo happy again
+            "https://github.com/rust-lang/crates.io-index" = {
+              insteadOf = "https://github.com/rust-lang/crates.io-index";
+            };
+          };
+          pull = { ff = "only"; };
+          push = { autoSetupRemote = true; };
+        #};
       };
     };
 
