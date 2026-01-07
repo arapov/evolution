@@ -44,7 +44,7 @@
 
       python3 poetry ruff pyright
 
-      openssl
+      openssl gnupg
 #      (pkgs.callPackage ./ossl.nix { })
 
 #      # Rust: https://github.com/nix-community/fenix
@@ -72,7 +72,7 @@
       signing = {
         key = "134C02E813889057DA2F3FDBEDDD4C5DAA149BBE";
         signByDefault = true;
-        signer = "/usr/local/bin/gpg";
+        signer = "/etc/profiles/per-user/neuro/bin/gpg";
       };
 
       settings = {
