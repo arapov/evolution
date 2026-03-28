@@ -70,6 +70,7 @@
       ];
 
       signing = {
+        format = "openpgp";
         key = "134C02E813889057DA2F3FDBEDDD4C5DAA149BBE";
         signByDefault = true;
         signer = "/etc/profiles/per-user/neuro/bin/gpg";
