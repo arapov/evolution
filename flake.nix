@@ -1,5 +1,5 @@
 {
-  description = "darwin system configuration for heimdall (aarch64)";
+  description = "sample darwin system";
 
   inputs = {
     darwin = {
@@ -31,8 +31,7 @@
   in {
     darwinConfigurations."heimdall" = darwin.lib.darwinSystem {
       inherit pkgs system;
-      specialArgs = { inherit fenix; };
-
+ 
       modules = [
         home-manager.darwinModules.home-manager
         ./configuration.nix

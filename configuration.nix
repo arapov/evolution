@@ -27,8 +27,7 @@
 
   home-manager.useGlobalPkgs = true;
   home-manager.useUserPackages = true;
-  home-manager.users.neuro = { pkgs, fenix, ... }: {
-    # stateVersion reflects the initial home-manager setup version; do not bump
+  home-manager.users.neuro = { pkgs, ... }: {
     home.stateVersion = "22.05";
 
     home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
@@ -48,7 +47,7 @@
       openssl gnupg
 #      (pkgs.callPackage ./ossl.nix { })
 
-      # Rust: https://github.com/nix-community/fenix
+#      # Rust: https://github.com/nix-community/fenix
       (fenix.stable.withComponents [
         "cargo"
         "clippy"
@@ -87,7 +86,10 @@
         url."git@github.com:" = {
           insteadOf = "https://github.com/";
         };
-
+        url."https://github.com/rust-lang/crates.io-index" = {
+          insteadOf = "https://github.com/rust-lang/crates.io-index";
+        };
+ 
         pull.ff = "only";
         push.autoSetupRemote = true;
       };
