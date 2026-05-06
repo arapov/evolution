@@ -44,6 +44,8 @@
 
       python3 poetry ruff pyright
 
+      nodejs
+
       openssl gnupg
 #      (pkgs.callPackage ./ossl.nix { })
 
