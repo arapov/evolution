@@ -42,7 +42,7 @@
       podman qemu
       google-cloud-sdk
 
-      python3 poetry ruff pyright
+      python3 poetry ruff pyright black
 
       nodejs
 
