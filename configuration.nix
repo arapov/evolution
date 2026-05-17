@@ -86,10 +86,7 @@
         core.editor = "vim";
         core.whitespace = "trailing-space,space-before-tab";
         url."git@github.com:" = {
-          insteadOf = "https://github.com/";
-        };
-        url."https://github.com/rust-lang/crates.io-index" = {
-          insteadOf = "https://github.com/rust-lang/crates.io-index";
+          pushInsteadOf = "https://github.com/";
         };
  
         pull.ff = "only";
