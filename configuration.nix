@@ -70,6 +70,7 @@
       lfs.enable = true;
       ignores = [
         ".DS_Store"
+        ".claude/"
       ];
 
       signing = {
