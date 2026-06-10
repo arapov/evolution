@@ -15,7 +15,6 @@
       nerd-fonts.fira-code
       nerd-fonts.hack
       nerd-fonts.jetbrains-mono
-      jetbrains-mono
       roboto
       roboto-mono
       (google-fonts.override { fonts = [ "Newsreader" ]; })
