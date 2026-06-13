@@ -47,6 +47,7 @@
       google-cloud-sdk gam
 
       python3 poetry ruff pyright black
+      uv
 
       nodejs
 
