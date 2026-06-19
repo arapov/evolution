@@ -43,6 +43,9 @@
       gmailctl jsonnet
 #      rclone restic
 
+      # document/PDF tooling for Claude Code (PDF render+extract, OCR, convert)
+      poppler-utils tesseract pandoc qpdf
+
       podman qemu
       google-cloud-sdk gam
 
